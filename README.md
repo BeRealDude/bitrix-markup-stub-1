@@ -29,3 +29,4 @@ node exportTokens.js
 ```
 @forward "./tokens" as tokens-*;
 ```
+test
