@@ -1,11 +1,108 @@
-@mixin font($name, $weight, $fileName) {
-  @font-face {
-    font-family: $name;
-    src: local("#{$name}"),
-    url("../assets/fonts/#{$name}/#{$fileName}.woff2") format("woff2"),
-    url("../assets/fonts/#{$name}/#{$fileName}.woff") format("woff");
-    font-weight: $weight;
-    font-style: normal;
-    font-display: swap;
-  }
+// @mixin font($name, $weight, $fileName) {
+//   @font-face {
+//     font-family: $name;
+//     src: local("#{$name}"),
+//     url("../../../core/assets/fonts/#{$fileName}.woff2") format("woff2"),
+//     url("../../../core/assets/fonts/#{$fileName}.woff") format("woff");
+//     font-weight: $weight;
+//     font-style: normal;
+//     font-display: swap;
+//   }
+// }
+
+// @include font('Molodo-font', 400, 'Molodo-font-Regular.woff2');
+
+@mixin show-font(
+  $family: 'Molodo-font',
+  $weight,
+  $size,
+  $line-height,
+  $color: #FFFFFF
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  width: $weight;
 }
+
+@mixin uploadFont($file, $format, $family, $weight: 400) {
+    @font-face {
+      font-family: $family;
+      font-weight: $weight;
+      font-display: swap;
+      src: url(#{$file}) format($format);
+    }
+  }
+
+  @include uploadFont(
+  $file: '../assets/fonts/Molodo-font-Regular.woff2',
+  $format: 'woff2',
+  $family: 'Molodo-font',
+  $weight: 400
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/Molodo-font-Regular.woff',
+  $format: 'woff',
+  $family: 'Molodo-font',
+  $weight: 400
+);
+//
+@include uploadFont(
+  $file: '../assets/fonts/GothamPro-Bold.woff2',
+  $format: 'woff2',
+  $family: 'Gotham Pro',
+  $weight: 700
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/GothamPro-Bold.woff',
+  $format: 'woff',
+  $family: 'Gotham Pro',
+  $weight: 700
+);
+//
+@include uploadFont(
+  $file: '../assets/fonts/GothamProRegular.woff2',
+  $format: 'woff2',
+  $family: 'Gotham Pro',
+  $weight: 400
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/GothamProRegular.woff',
+  $format: 'woff',
+  $family: 'Gotham Pro',
+  $weight: 400
+);
+//
+@include uploadFont(
+  $file: '../assets/fonts/Ubuntu-Light.woff2',
+  $format: 'woff2',
+  $family: 'Ubuntu',
+  $weight: 300
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/Ubuntu-Light.woff',
+  $format: 'woff',
+  $family: 'Ubuntu',
+  $weight: 300
+);
+//
+@include uploadFont(
+  $file: '../assets/fonts/Ubuntu-Regular.woff2',
+  $format: 'woff2',
+  $family: 'Ubuntu',
+  $weight: 400
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/Ubuntu-Regular.woff',
+  $format: 'woff',
+  $family: 'Ubuntu',
+  $weight: 400
+);
+

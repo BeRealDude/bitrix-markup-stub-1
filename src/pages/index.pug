@@ -1,9 +1,27 @@
-extends ../core/ui/layout/templates/map.pug
+//- extends ../core/ui/layout/templates/map.pug
 
-block title
-  | Карта проекта
+//- block title
+//-   | Карта проекта
 
-block workarea
-  h1 Карта проекта
+//- block workarea
+//-   h1 Карта проекта
 
-  a(href="ui.html") ui
+//-   a(href="ui.html") ui
+
+//-   include ../core/ui/layout/templates/paragraf.pug
+
+- var title = 'Впечатляющие места'
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel="stylesheet", href="css/index.css")
+
+  body
+    include ../components/header
+    main
+      p Текст
+    include ../components/footer
+      
