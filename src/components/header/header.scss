@@ -1,0 +1,143 @@
+@use '../../core/config/scss' as config;
+@use '../../core/lib/scss' as lib;
+
+
+.header {
+  font-family: config.$font-title;
+  height: 56px;
+  border-bottom: 1px solid #1D1F2533;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.open-modal {
+  height: 40px;
+  width: 172px;
+  border-radius: 20px;
+  background-color: #EDEDED;
+  background-image: url('../assets/media/shaded-arrow.svg');
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: 144px 18px;
+  font-family: config.$font-primary;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15.6px;
+  padding-right: 46px;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.open-modal:hover {
+  border: 1px solid #1D1F2533;
+  background-color: white;
+}
+
+
+.custom-modal-content {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+    color: black;
+    pointer-events: auto;
+    background-color: white;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 12px;
+    outline: 0;
+    height: 540px;
+    padding-right: 8px;
+    clip-path: stroke-box;
+}
+
+.modal-header-custom {
+ padding: 24px 32px 0;
+}
+
+.input {
+  background-image: url('../assets/media/icon-input.svg');
+  margin: 16px 16px 16px;
+  padding: 8px 0 8px 37px;
+  width: 332px;
+  border-radius: 100px;
+  border: 1px solid #D2D2D3;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 14px;
+  font-family: config.$font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn-close-custom {
+  background-image: url('../assets/media/btn-close.svg');
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  position: absolute;
+  top: 22px;
+  right: 24px;
+}
+
+.btn-close-custom:hover {
+  opacity: .4;
+  transition: .2s;
+}
+
+.modal-title {
+  font-family: config.$font-primary;
+  font-weight: 700;
+}
+
+.modal-body-custom {
+  position: relative;
+    overflow-y: scroll;
+    padding: 0px
+}
+
+.list {
+  list-style: none;
+  font-family: config.$font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.6px;
+  padding: 0;
+}
+
+.list-item {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.list-item-md{
+  font-weight: 500;
+}
+  
+.list-item:hover {
+  background-color: #F0EDE7;
+  transition: .2s;
+}
+
+.list-item:active {
+  filter: brightness(75%);
+    transition: .1s;
+}
+
+.modal-body-custom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-body-custom::-webkit-scrollbar-thumb {
+  background-color: #0042693D; 
+  border-radius: 5px;
+}
+
+.modal-body-custom::-webkit-scrollbar-track {
+  background-color: #0042690F; 
+}
