@@ -2,35 +2,41 @@
 @use '../../lib/scss' as lib;
 
 
-// .layout {
-//   display: flex;
-//   min-height: 200vh;
-//   flex-direction: column;
+.layout {
+  display: flex;
+  min-height: 200vh;
+  flex-direction: column;
 
-//   &__header {
-//     position: sticky;
-//     top: 0;
-//   }
+  &__header {
+    position: sticky;
+    top: 0;
+  }
 
 
-//   &__main {
-//     flex-grow: 1;
-//   }
+  &__main {
+    flex-grow: 1;
+  }
 
-//   &__footer {
-//     margin-top: auto;
-//   }
-// }
+  &__footer {
+    margin-top: auto;
+  }
+}
 
 html {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: 'Arial', 'Helvetica', sans-serif;
  
 }
 
-.header {
-  font-family: config.$font-title;
+body {
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 p {

@@ -1,0 +1,247 @@
+@use '../../core/config/scss' as config;
+@use '../../core/lib/scss' as lib;
+
+
+.header {
+  height: 56px;
+  border-bottom: 1px solid #1D1F2533;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 0 28px 0 14px;
+}
+
+span.font-main {
+font-family: config.$font-title;
+line-height: 22px;
+font-size: 22.3px;
+}
+
+.font-secondary {
+  font-family: config.$font-primary;
+  font-weight: 600;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  line-height: 6px;
+}
+
+.icon {
+    width: 51px;
+    height: 35px;
+}
+
+.border-vertical {
+  border-left: 1px solid rgba(29, 31, 37, 0.2);
+    height: 28px;
+    margin-right: 18px;
+}
+
+
+.tooltip-visually-impaired {
+  display: none;
+  position: absolute;
+  width: 317px;
+  height: 91px;
+  background-color: rgb(35, 36, 79);
+  color: white;
+  border-radius: 20px;
+  top: 6px;
+  right: 110px;
+  font-family: config.$font-primary;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.tooltip-visually-impaired__text {
+  padding: 16px 27px 16px 25px;
+    display: list-item;
+}
+
+.icon-visually-impaired {
+  width: 29px;
+  height: 23px;
+  position: relative;
+}
+
+.icon-visually-impaired-active {
+  width: 29px;
+  height: 23px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+.open-modal {
+  height: 40px;
+  width: 172px;
+  border-radius: 20px;
+  background-color: #EDEDED;
+  background-image: url('../assets/media/shaded-arrow.svg');
+  border: 1px solid transparent;
+  background-repeat: no-repeat;
+  background-position: 144px 18px;
+  font-family: config.$font-primary;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15.6px;
+  padding-right: 46px;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.open-modal:hover {
+  border: 1px solid #1D1F2533;
+  background-color: white;
+}
+
+
+
+
+// Стили модалки
+.custom-modal-content {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 364px;
+    color: black;
+    pointer-events: auto;
+    background-color: white;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 12px;
+    outline: 0;
+    height: 540px;
+    padding-right: 8px;
+    clip-path: stroke-box;
+}
+
+.modal-header-custom {
+ padding: 24px 32px 0;
+}
+
+.input {
+  background-image: url('../assets/media/icon-input.svg');
+  margin: 16px 16px 16px;
+  padding: 8px 0 8px 37px;
+  width: 332px;
+  border-radius: 100px;
+  border: 1px solid #D2D2D3;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 14px;
+  font-family: config.$font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-close-custom {
+  background-image: url('../assets/media/btn-close.svg');
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  position: absolute;
+  top: 22px;
+  right: 24px;
+}
+
+.btn-close-custom:hover {
+  opacity: .4;
+  transition: .2s;
+}
+
+.modal-title {
+  font-family: config.$font-primary;
+  font-weight: 700;
+}
+
+.modal-body-custom {
+  position: relative;
+    overflow-y: scroll;
+    padding: 0px
+}
+
+.list {
+  list-style: none;
+  font-family: config.$font-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17.6px;
+  padding: 0;
+}
+
+.list-item {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.list-item-md{
+  font-weight: 500;
+}
+  
+.list-item:hover {
+  background-color: #F0EDE7;
+  transition: .2s;
+}
+
+.list-item:active {
+  filter: brightness(75%);
+    transition: .1s;
+}
+
+.modal-body-custom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-body-custom::-webkit-scrollbar-thumb {
+  background-color: #0042693D; 
+  border-radius: 5px;
+}
+
+.modal-body-custom::-webkit-scrollbar-track {
+  background-color: #0042690F; 
+}
+
+
+//  Стили ссылок
+
+.nav {
+  margin: 0 18px 0 27px;
+}
+
+.nav__link {
+  font-family: config.$font-primary;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.6px;
+  text-decoration: none;
+  color: #1D1F25;
+  margin-right: 25px;
+}
+
+.nav__link:last-of-type  {
+  margin: 0;
+}
+
+.nav__link:hover {
+  opacity: .7;
+  transition: .2s;
+}
+
+.nav__link:active {
+  transition: .1s;
+  filter: drop-shadow(2px 4px 6px black);
+  opacity: 1;
+}
