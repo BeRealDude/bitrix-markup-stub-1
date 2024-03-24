@@ -1,26 +1,30 @@
-include ../../core/config/pug/mocks.pug
 
-mixin ls
-  ul.list
-    each item, index in areaCity
-      if index < 2
-        li.list-item.list-item-md= item
-      else
-        li.list-item= item
+
+mixin link(href, name)
+  a.nav__link(href=href)&attributes(attributes)= name
+
+
 
 
 
 header.header
         svg.icon
             use(href='./assets/icons/clean/sprite.svg#logo-header')
+        h1.title 
+            span.font-main Владимирская
+            span.font-secondary ОБЛАСТЬ    
         button.open-modal(type="button", data-bs-toggle="modal", data-bs-target="#staticBackdrop") Все районы
-        
-        .modal.fade#staticBackdrop(data-bs-backdrop="static", data-bs-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true", style="--bs-modal-width: 364px;")
-            .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
-                .custom-modal-content
-                    .modal-header-custom
-                        h1.modal-title.fs-5#staticBackdropLabel Выберите район
-                        button.btn-close-custom(type="button", data-bs-dismiss="modal", aria-label="Закрыть")
-                    input.input(value='')
-                    .modal-body-custom
-                        +ls
+        include ../modal/modal.pug
+        nav.nav
+            +link('#', 'Достопримечательности')
+            +link('#', 'Путеводители')
+            +link('#', 'Экскурсии')
+            +link('#', 'Заметки путешественников')
+            +link('#', 'Конструктор маршрутов')
+        .border-vertical
+        svg.icon-visually-impaired
+           use(href='./assets/icons/clean/sprite.svg#icon-visually-impaired')
+            .tooltip-visually-impaired
+                span.tooltip-visually-impaired__text Версия сайта для слабовидящих
+                svg.icon-visually-impaired-active
+                    use(href='./assets/icons/default/sprite.svg#icon-visually-impaired-active')   

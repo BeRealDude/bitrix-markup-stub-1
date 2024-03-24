@@ -37,3 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const icon = document.querySelector(".icon-visually-impaired");
+const tooltip = document.querySelector(".tooltip-visually-impaired");
+
+let timer;
+
+icon.addEventListener("mouseenter", function () {
+  tooltip.style.display = "block";
+});
+
+icon.addEventListener("mouseleave", function () {
+  timer = setTimeout(function () {
+    tooltip.style.display = "none";
+  }, 5000);
+});
+
+tooltip.addEventListener("mouseenter", function () {
+  clearTimeout(timer);
+});
+
+tooltip.addEventListener("mouseleave", function () {
+  tooltip.style.display = "none";
+});

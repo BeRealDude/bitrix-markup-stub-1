@@ -1,0 +1,18 @@
+include ../../core/config/pug/mocks.pug
+mixin ls
+  ul.list
+    each item, index in areaCity
+      if index < 2
+        li.list-item.list-item-md= item
+      else
+        li.list-item= item
+
+.modal.fade#staticBackdrop(data-bs-backdrop="static", data-bs-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true", style="--bs-modal-width: 364px;")
+            .modal-dialog.modal-dialog-centered.modal-dialog-scrollable
+                .custom-modal-content
+                    .modal-header-custom
+                        h1.modal-title.fs-5#staticBackdropLabel Выберите район
+                        button.btn-close-custom(type="button", data-bs-dismiss="modal", aria-label="Закрыть")
+                    input.input(value='')
+                    .modal-body-custom
+                        +ls
