@@ -1,0 +1,23 @@
+mixin content(href, name, title, text)
+  .container-custom
+    h2.sub-title= title
+    p.text= text
+    a.link(href=href)&attributes(attributes)= name
+
+#carouselExample.carousel.slide.margin
+  .carousel-inner
+    .carousel-item.active
+      img.d-block.w-100.custom-h(src="./assets/media/carousel-banner.png" alt="девушка с фотоаппаратом")
+      +content('#', 'Достопримечательности', 'Впечатляющие места', 'наших городов')
+    .carousel-item
+      img.d-block.w-100.custom-h(src="./assets/media/yellow-car.png" alt="жёлтая машина")
+      +content('#', 'Путеводители', 'Впечатляющие места', 'наших городов')
+    .carousel-item
+      img.d-block.w-100.custom-h.custom-img(src="./assets/media/banner-slide-three.png" alt="автобус на фоне церкови")
+      +content('#', 'Экскурсии', 'Впечатляющие места', 'наших городов')
+  button.custom-btn-prev(type="button", data-bs-target="#carouselExample", data-bs-slide="prev")
+    svg.custom-btn-prev-icon
+        use(href='./assets/icons/clean/sprite.svg#arrow-left')
+  button.custom-btn-next(type="button", data-bs-target="#carouselExample", data-bs-slide="next")
+    svg.custom-btn-next-icon
+        use(href='./assets/icons/clean/sprite.svg#arrow-right')
