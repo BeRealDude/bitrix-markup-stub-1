@@ -1,41 +1,3 @@
-.cards {
-    position: relative;
-    padding-top: 140px;
-}
-
-.container-header {
-    display: grid;
-    width: 570px;
-    height: 165px;
-    position: absolute;
-    top: 180px;
-    right: 322px;
-    grid-template-rows: 13px 80px 73px;
-    column-gap: 26px;
-}
-
-.container-header__icon-header {
-    width: 73px;
-    height: 155px;
-    fill: #BE192D;
-    grid-row: 2 / 3;
-}
-
-.container-header__title {
-    font-family: 'Gotham Pro';
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 42px;
-    grid-row: 1 / 2;
-    margin: 0;
-    grid-row: 1 / 3;
-}
-
-.btn-open-list {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-}
-
 .card-list {
     list-style-type: none;
     padding: 0;
@@ -220,39 +182,4 @@
 .over-link-item:hover .card-item__cap {
     font-weight: 300;
     color: #768094;
-}
-
-@media (max-width: 1890px) {
-
-    .container-header {
-        right: 304px;
-    }
-}
-
-@media (max-width: 1860px) {
-
-    .container-header {
-        right: 281px;
-    }
-}
-
-@media (max-width: 1700px) {
-
-    .container-header {
-        right: 186px;
-    }
-}
-
-@media (max-width: 1600px) {
-
-    .container-header {
-        right: 117px;
-    }
-}
-
-@media (max-width: 1500px) {
-
-    .container-header {
-        right: 101px;
-    }
 }
