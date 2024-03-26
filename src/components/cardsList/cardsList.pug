@@ -1,0 +1,17 @@
+mixin card-list(items)
+  ul.card-list
+    each item, index in items
+      li.card-item(class=index === 0 ? 'card-item_first-item' : index === 1 ? 'card-item_second-item' : index === 2 ? 'card-item_third-item' : index === 3 ? 'card-item_fourth-item' : index === 4 ? 'card-item_fifth-item' : index === 5 ? 'card-item_sixth-item' : '')
+        a.over-link-item(href=item.hrefLink)
+          if index !== 5
+           span.card-item__badge= item.badge
+          div.container-img(class=index === 5 ? 'container-img_sixth' : '')
+            if index !== 5  
+              img.card-item__img(src=item.hrefImg, alt=item.altImg, class=index === 0 ? 'card-item__img_first-item' : '')
+          if index !== 5
+            p.card-item__text= item.text
+          span.card-item__link(class=index === 5 ? 'card-item__link_sixth' : '')= item.nameLink
+             if index === 5
+                 span.card-item__cap 38
+             svg.card-item__icon-link(class=index === 5 ? 'card-item__icon-link_sixth' : '')
+               use(href=item.hrefSvg)

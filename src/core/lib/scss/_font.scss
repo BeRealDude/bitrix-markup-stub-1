@@ -93,6 +93,20 @@
 );
 //
 @include uploadFont(
+  $file: '../assets/fonts/GothamPro-Light.woff2',
+  $format: 'woff2',
+  $family: 'Gotham Pro',
+  $weight: 300
+);
+
+@include uploadFont(
+  $file: '../assets/fonts/GothamPro-Light.woff',
+  $format: 'woff',
+  $family: 'Gotham Pro',
+  $weight: 300
+);
+//
+@include uploadFont(
   $file: '../assets/fonts/Ubuntu-Light.woff2',
   $format: 'woff2',
   $family: 'Ubuntu',

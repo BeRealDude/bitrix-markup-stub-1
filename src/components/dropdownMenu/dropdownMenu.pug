@@ -1,0 +1,14 @@
+mixin dropdown-menu
+  .dropdown-menu.dropdown-menu-end.rounded-4
+   .dropdown-menu-content
+      .dropdown-menu-header
+         h1.dropdown-menu-header__title Выберите район
+         button.dropdown-menu-header__btn-close(type="button", aria-label="Закрыть")
+      input.dropdown-menu-content__input(value='Владимирская область')
+      .dropdown-menu-body
+        ul.dropdown-menu-list
+           each item, index in areaCity
+              if index < 2
+                li.dropdown-menu-list__item.dropdown-menu-list__item_md= item
+              else
+                li.dropdown-menu-list__item= item
