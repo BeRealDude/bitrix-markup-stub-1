@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "7.22.11",
     "@babel/preset-env": "7.22.10",
+    "@fancyapps/ui": "^5.0.35",
     "browser-sync": "^2.29.3",
     "del": "^6.1.1",
     "gh-pages": "^6.0.0",
@@ -38,5 +39,7 @@
     "hygen": "^6.2.11",
     "sass": "^1.66.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7"
+  }
 }

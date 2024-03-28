@@ -1,3 +1,6 @@
+// import { Fancybox } from "@fancyapps/ui";
+
+
 (function (window) {
   if (!window.app) {
     window.app = {};
@@ -72,8 +75,10 @@
   };
 
   const buildComponentLogger = (componentName) => {
-    return (text, context = '', data = null) => {
-      const msg = context ? `${componentName}:${context}:${text}` : `${componentName}:${text}`;
+    return (text, context = "", data = null) => {
+      const msg = context
+        ? `${componentName}:${context}:${text}`
+        : `${componentName}:${text}`;
       console.debug(msg);
 
       if (data) {
@@ -96,19 +101,25 @@
   };
 
   const throttle = (callee, timeout) => {
-    let timer = null
+    let timer = null;
 
     return function perform(...args) {
-      if (timer) return
+      if (timer) return;
 
       timer = setTimeout(() => {
-        callee(...args)
+        callee(...args);
 
-        clearTimeout(timer)
-        timer = null
+        clearTimeout(timer);
+        timer = null;
       }, timeout);
     };
   };
+
+//   Fancybox.bind("[data-fancybox]", {
+    // Дополнительные настройки
+//   });
+
+//  console.log(Fancybox);
 
   window.app.lib = {
     setObserver,

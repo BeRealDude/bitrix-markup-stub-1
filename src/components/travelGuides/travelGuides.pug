@@ -1,0 +1,38 @@
+include ../dropdownMenu/dropdownMenu.pug
+
+
+section.travelGuides
+    
+    h2.travelGuides__title Путеводители
+    +dropdown-menu
+    .container
+      ul.nav.nav_custom.nav-tabs.nav-tabs_custom#myTabs(role="tablist")
+            li.nav-item(role="presentation")
+              button.nav-link.nav-link_custom.active(id="tab1-tab", data-bs-toggle="tab", data-bs-target="#tab1", type="button", role="tab", aria-controls="tab1", aria-selected="true") Все
+            li.nav-item(role="presentation")
+              button.nav-link.nav-link_custom(id="tab2-tab", data-bs-toggle="tab", data-bs-target="#tab2", type="button", role="tab", aria-controls="tab2", aria-selected="false") Видео
+            li.nav-item(role="presentation")
+              button.nav-link.nav-link_custom(id="tab3-tab", data-bs-toggle="tab", data-bs-target="#tab3", type="button", role="tab", aria-controls="tab3", aria-selected="false") Аудио
+              li.nav-item(role="presentation")
+              button.nav-link.nav-link_custom.nav-link-last(id="tab4-tab", data-bs-toggle="tab", data-bs-target="#tab4", type="button", role="tab", aria-controls="tab4", aria-selected="false") Статьи
+      
+      .tab-content#myTabContent
+        .tab-pane.fade.show.active(id="tab1", role="tabpanel", aria-labelledby="tab1-tab")
+          a(href="https://www.youtube.com/watch?v=z2X2HaTvkl8", data-fancybox)
+            img(src="./assets/media/img-card-item-3.png", width="200")
+        .tab-pane.fade(id="tab2", role="tabpanel", aria-labelledby="tab2-tab")
+          a(href="https://vimeo.com/259411563", data-fancybox)
+            img(src="./assets/media/img-card-item-1.png", width="200")
+        .tab-pane.fade(id="tab3", role="tabpanel", aria-labelledby="tab3-tab")
+          a(href="https://www.youtube.com/watch?v=z2X2HaTvkl8", data-fancybox)
+            img(src="./assets/media/img-card-item-2.png", width="200")
+        .tab-pane.fade(id="tab4", role="tabpanel", aria-labelledby="tab4-tab")
+          p Здесь будут статьи
+
+
+
+
+        
+     
+    
+

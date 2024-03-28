@@ -97,6 +97,14 @@ function scripts() {
     .pipe(localServer.stream())
 }
 
+
+function copyFancybox() {
+  return src("node_modules/@fancyapps/ui/dist/fancybox/*").pipe(
+    dest("public/assets/fancybox")
+  );
+}
+
+
 //If Pug
 function pugMaker() {
   return src('src/pages/*.pug')
@@ -199,6 +207,7 @@ exports.pugMaker = pugMaker
 exports.copyResources = copyResources
 exports.buildSvgSprites = buildSvgSprites
 exports.deploy = deploy
+exports.copyFancybox = copyFancybox;
 
 exports.default = parallel(
   clean,
@@ -210,6 +219,7 @@ exports.default = parallel(
   pages,
   upLocalServer,
   watching,
+  copyFancybox,
 );
 
 exports.build = series(
@@ -220,7 +230,7 @@ exports.build = series(
   buildSvgSprites(),
   pugMaker,
   pages,
-)
+);
 
 exports.deploy = series(
   clean,

@@ -1,0 +1,62 @@
+.travelGuides__title {
+    font-family: 'Gotham Pro';
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    margin: 0;
+}
+
+.nav_custom {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #00426947;
+    width: 262px;
+    flex-wrap: nowrap
+}  
+
+
+
+
+.nav-link_custom {
+    color: #00203399;
+    font-family: 'Gotham Pro';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.4px;
+    padding: 9px 9px 8px 0px;
+    margin: 0 12px 0 0;
+}
+
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-bottom: 2px solid #BE192D !important; 
+    color: #23244F;
+    border: none;
+    font-weight: 500;
+}
+
+
+// .nav-link_custom.active, .nav-item.show .nav-link {
+//     border-bottom: 2px solid #BE192D !important; 
+//     color: #23244F;
+//     border: none;
+//     font-weight: 500;
+    
+// }
+
+
+.nav-tabs_custom .nav-link_custom {
+    border: none;
+}
+
+
+.nav-link:hover {
+    border: none;
+    color: #23244F;
+}
+
+
+
+.nav-link-last {
+    margin: 0;
+}
